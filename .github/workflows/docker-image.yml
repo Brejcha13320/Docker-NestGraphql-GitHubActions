@@ -46,7 +46,7 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push $DOCKER_USER/$DOCKER_NAME_IMAGE:NEW_VERSION
+        docker push $DOCKER_USER/$DOCKER_NAME_IMAGE:$NEW_VERSION
         docker push $DOCKER_USER/$DOCKER_NAME_IMAGE:latest
         
     # - name: Build the Docker image
